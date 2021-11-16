@@ -19,7 +19,7 @@
       document.querySelector('[data-form-input]').value = "";
 
       if(inputText.length == 8 && /^[0-9]+$/.test(inputText)){
-        const response = await fetch('https://buscacep-compass.herokuapp.com' + inputText);
+        const response = await fetch('https://buscacep-compass.herokuapp.com/' + inputText);
         const data = await response.json();
         if(data.hasOwnProperty('erro')){
           exibeMensagemErroInexistente();
