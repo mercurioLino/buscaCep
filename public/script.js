@@ -5,7 +5,7 @@ botaoOk.addEventListener('click' , getContent);
 async function getContent() {
   let inputText = document.querySelector('[data-form-input]').value;
   if(inputText.length == 8 && /^[0-9]+$/.test(inputText)){
-    const response = await fetch('http://localhost:3000/' + inputText);
+    const response = await fetch(inputText);
     const data = await response.json();
     if(data.hasOwnProperty('erro')){
       exibeMensagemErroInexistente();

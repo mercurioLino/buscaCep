@@ -11,7 +11,7 @@ var Schema = mongoose.Schema
 var cepSchema = new Schema({})
 var Cep = mongoose.model('ceps', cepSchema);
 
-const port = process.env.PORT || 3000;
+const port = 8080 || process.env.PORT || 3000;
 
 app.use(cors());
 
