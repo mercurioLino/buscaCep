@@ -11,7 +11,7 @@ var Schema = mongoose.Schema
 var cepSchema = new Schema({})
 var Cep = mongoose.model('ceps', cepSchema);
 
-//const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 
@@ -24,11 +24,12 @@ app.get('/:cep', async(req, res) => {
         Cep.collection.findOne({"cep": data.cep}, (error, dado) =>{
             try{
                 if(dado){
-                    console.log('CEP já buscado anteriormente, não será armazenado no BD');
+                    console.log('CEP já buscado anteriormente! Não será armazenado no BD');
                 } else if(error){
                     console.log('erro');
                 } else{
                     if(!(data.hasOwnProperty('erro'))){
+                        console.log('Novo CEP encontrado! Armazenando no BD...');
                         Cep.collection.insertOne(data);
                     }
                 }
@@ -59,4 +60,4 @@ app.post('/log', (req,res) =>{
     }
 })
 
-app.listen('3000');
+app.listen(port);
