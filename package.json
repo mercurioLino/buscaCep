@@ -4,7 +4,7 @@
   "description": "Segunda sprint do programa de bolsas Compass.uol para formação em chatbot Rasa.",
   "main": "main.js",
   "scripts": {
-    "install": "npm install nodemon express cors axios mongodb mongoose",
+    "install": "npm install nodemon express cors axios mongodb mongoose dotenv",
     "start": "npm install && nodemon main.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongodb": "^4.2.0",
     "mongoose": "^6.0.13",
