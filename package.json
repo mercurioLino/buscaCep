@@ -4,8 +4,8 @@
   "description": "Segunda sprint do programa de bolsas Compass.uol para formação em chatbot Rasa.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon main.js"
+    "install": "npm install nodemon express cors axios mongodb mongoose",
+    "start": "npm install && nodemon main.js"
   },
   "repository": {
     "type": "git",
